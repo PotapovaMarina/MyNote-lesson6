@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_note_background_color"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    tools:context=".AboutAppFragment">
+
+    <TextView
+        android:id="@+id/about_app_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/about_app_text"
+        android:textColor="@color/create_button_color"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/about_app_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/about_app_info_text"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

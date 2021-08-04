@@ -2,7 +2,6 @@ package com.example.mynote_lesson6;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +19,6 @@ public class NoteFragment extends Fragment {
     public static final String NOTE_ARGS_KEY = "NOTE_ARGS_KEY";
     private static final int FLAG_EDIT = 1;
     private static final int FLAG_NEW = 0;
-
-
     private NoteEntity note = null;
     private EditText headEt;
     private EditText textEt;
@@ -69,12 +66,11 @@ public class NoteFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-
         if (note != null) {
             headEt.setText(note.head);
             textEt.setText(note.text);
             editTextDate.setText(note.date);
-        }
+        } else return;
     }
 
     private void datePickerInit() {

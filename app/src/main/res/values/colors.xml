@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="create_button_color">#FFC107</color>
     <color name="fragment_note_background_color">#F8F3CB</color>
+    <color name="blue">#FF33B5E5</color>
 </resources>
