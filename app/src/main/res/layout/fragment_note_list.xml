@@ -7,28 +7,17 @@
     android:backgroundTint="@color/fragment_note_background_color"
     android:background="@color/design_default_color_background">
 
-    <ScrollView
-        android:id="@+id/scroll_view"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/margin_for_scroll"
-        android:layout_marginEnd="@dimen/margin_for_scroll"
-        app:layout_constraintBottom_toBottomOf="@+id/create_button"
+        android:background="@color/fragment_note_background_color"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/create_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:id="@+id/linear"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/fragment_note_background_color"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/create_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </ScrollView>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/create_button"

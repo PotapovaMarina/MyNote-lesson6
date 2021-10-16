@@ -16,4 +16,6 @@
     <string name="fragment_navigation">Заметки</string>
     <string name="about_app_text">Заметки</string>
     <string name="about_app_info_text">версия 1.0, 2021</string>
+    <string name="create_note_title">Новая заметка</string>
+    <string name="edit_note_title">Редактирование</string>
 </resources>
