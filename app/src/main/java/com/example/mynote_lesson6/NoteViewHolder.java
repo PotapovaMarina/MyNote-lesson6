@@ -14,8 +14,7 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
     private final TextView editTextView;
     private final CardView cardView;
     private NoteEntity noteEntity;
-    private NotesAdapter.OnItemClickListener clickListener;
-
+    private int position;
 
     public NoteViewHolder(@NonNull ViewGroup parent, @Nullable NotesAdapter.OnItemClickListener clickListener) {
         super(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_note, parent, false));
@@ -24,7 +23,7 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         editTextView = itemView.findViewById(R.id.edit_text_view);
         cardView.setOnClickListener(v -> {
             if (clickListener != null) {
-                clickListener.onItemClick(noteEntity);
+                clickListener.onItemClick(itemView, position);
             }
         });
     }
@@ -33,5 +32,8 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         this.noteEntity = noteEntity;
         subjectTextView.setText(noteEntity.head);
         editTextView.setText(noteEntity.text);
+        itemView.setOnClickListener(v -> {
+            itemView.showContextMenu();
+        });
     }
 }

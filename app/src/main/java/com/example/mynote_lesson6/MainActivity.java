@@ -114,12 +114,11 @@ public class MainActivity extends AppCompatActivity implements NoteFragment.Cont
         }
     }
 
-    @Override
+
     public void createNewNote() {
         openProfileScreen(null);
     }
 
-    @Override
     public void openProfileScreen(NoteEntity note) {
         if (!isLandscape) {
             setTitle(note == null ? R.string.create_note_title : R.string.edit_note_title);
