@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -113,17 +114,21 @@ public class MainActivity extends AppCompatActivity implements NoteFragment.Cont
         }
     }
 
-    @Override
+
     public void createNewNote() {
         openProfileScreen(null);
     }
 
-    @Override
     public void openProfileScreen(NoteEntity note) {
-        getSupportFragmentManager()
-                .beginTransaction()
+        if (!isLandscape) {
+            setTitle(note == null ? R.string.create_note_title : R.string.edit_note_title);
+        }
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        if (!isLandscape) {
+            transaction.addToBackStack(null);
+        }
+        transaction
                 .add(isLandscape ? R.id.detail_container : R.id.container, NoteFragment.newInstance(note), "NoteFragment")
-                .addToBackStack(null)
                 .commit();
     }
 }

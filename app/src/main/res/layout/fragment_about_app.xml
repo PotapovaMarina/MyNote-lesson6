@@ -6,7 +6,6 @@
     android:background="@color/fragment_note_background_color"
     android:gravity="center"
     android:orientation="vertical"
-
     tools:context=".AboutAppFragment">
 
     <TextView

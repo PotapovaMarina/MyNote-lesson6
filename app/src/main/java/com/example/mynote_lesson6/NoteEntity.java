@@ -10,6 +10,10 @@ public class NoteEntity implements Parcelable {
     public int flag;
     public String date;
 
+    public NoteEntity() {
+
+    }
+
     @Override
     public String toString() {
         return head + ' ' + "(" + date + ")";

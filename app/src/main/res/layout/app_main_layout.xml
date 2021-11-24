@@ -8,7 +8,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbar_height"
-        android:background="@color/create_button_color"></androidx.appcompat.widget.Toolbar>
+        android:background="@color/create_button_color" />
 
     <FrameLayout
         android:id="@+id/container"
